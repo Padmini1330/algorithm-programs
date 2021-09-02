@@ -2,10 +2,10 @@ package com.bridgelabz.algorithmprograms;
 
 import java.util.Scanner;
 
-public class MergeSort 
+public class MergeSort<T extends Comparable<T>>
 {
 	
-	void mergeSort(String wordArray[], int left, int right) 
+	void mergeSort(T wordArray[], int left, int right) 
 	{
 		if (left<right) 
 		{
@@ -18,14 +18,14 @@ public class MergeSort
 	}
 	
 	
-	void merge(String wordArray[], int left, int middle, int right) 
+	void merge(T wordArray[], int left, int middle, int right) 
 	{
 
 		int sizeOfLeft = middle - left + 1;
 		int sizeOfRight = right - middle;
 
-		String leftArray[] = new String[sizeOfLeft];
-		String rightArray[] = new String[sizeOfRight];
+		T[] leftArray = (T[])new String[sizeOfLeft];
+		T[] rightArray = (T[])new String[sizeOfRight];
 
 		for (int indexLeft = 0; indexLeft < sizeOfLeft; ++indexLeft)
 			leftArray[indexLeft] = wordArray[left + indexLeft];
@@ -66,7 +66,7 @@ public class MergeSort
 		}
 	}
 
-	public void printArray(String[] wordArray) 
+	public void printArray(T[] wordArray) 
 	{
 		int arraySize = wordArray.length;
 		for (int index = 0; index < arraySize; index++) 
@@ -78,7 +78,7 @@ public class MergeSort
 	public static void main(String[] args) 
 	{
 
-		MergeSort sort = new MergeSort();
+		MergeSort<String> sort = new MergeSort<String>();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the number of words: ");
 		int arraySize = scanner.nextInt();
