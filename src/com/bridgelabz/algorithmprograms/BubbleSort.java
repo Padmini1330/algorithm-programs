@@ -2,9 +2,9 @@ package com.bridgelabz.algorithmprograms;
 
 import java.util.Scanner;
 
-public class BubbleSort 
+public class BubbleSort<T extends Comparable<T>> 
 {
-	public void bubbleSort(Integer[] numberArray) {
+	public void bubbleSort(T[] numberArray) {
 
 		int arraySize = numberArray.length;
 
@@ -14,7 +14,7 @@ public class BubbleSort
 			{
 				if (numberArray[indexJ].compareTo(numberArray[indexJ + 1]) > 0) 
 				{
-					Integer tempNumber = numberArray[indexJ];
+					T tempNumber = numberArray[indexJ];
 					numberArray[indexJ] = numberArray[indexJ + 1];
 					numberArray[indexJ + 1] = tempNumber;
 				}
@@ -24,7 +24,7 @@ public class BubbleSort
 		printArray(numberArray);
 	}
 
-	public void printArray(Integer[] numberArray) 
+	public void printArray(T[] numberArray) 
 	{
 		int arraySize = numberArray.length;
 		for (int index = 0; index < arraySize; index++) 
@@ -35,7 +35,7 @@ public class BubbleSort
 
 	public static void main(String[] args) {
 
-		BubbleSort sort = new BubbleSort();
+		BubbleSort<Integer> sort = new BubbleSort<Integer>();
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the size of array: ");
