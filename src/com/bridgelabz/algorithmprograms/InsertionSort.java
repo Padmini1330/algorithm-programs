@@ -2,15 +2,15 @@ package com.bridgelabz.algorithmprograms;
 
 import java.util.Scanner;
 
-public class InsertionSort 
+public class InsertionSort<T extends Comparable<T>> 
 {
-	public void insertionSort(String[] wordArray) 
+	public void insertionSort(T[] wordArray) 
 	{
 		int arraySize = wordArray.length;
 
 		for (int index = 1; index < arraySize; index++) 
 		{
-			String key = wordArray[index];
+			T key = wordArray[index];
 			int previousIndex = index - 1;
 			while ((previousIndex >= 0) && (wordArray[previousIndex].compareTo(key) > 0)) 
 			{
@@ -23,7 +23,7 @@ public class InsertionSort
 		printArray(wordArray);
 	}
 
-	public void printArray(String[] wordArray) 
+	public void printArray(T[] wordArray) 
 	{
 		int arraySize = wordArray.length;
 		for (int index = 0; index < arraySize; index++) 
@@ -34,7 +34,7 @@ public class InsertionSort
 
 	public static void main(String[] args) {
 
-		InsertionSort sort = new InsertionSort();
+		InsertionSort<String> sort = new InsertionSort<String>();
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the number of words: ");
@@ -47,7 +47,7 @@ public class InsertionSort
 			wordArray[index] = word;
 		}
 
-		System.out.println("The array of words are[unsorted] : ");
+		System.out.println("The array of words[unsorted] are: ");
 		sort.printArray(wordArray);
 		
 		System.out.println("");
