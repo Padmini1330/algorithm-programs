@@ -3,9 +3,9 @@ package com.bridgelabz.algorithmprograms;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class BinarySearch 
+public class BinarySearch<T extends Comparable<T>> 
 {
-	public int binarySearch(ArrayList<String> arrayList, int low, int high, String key) 
+	public int binarySearch(ArrayList<T> arrayList, int low, int high, T key) 
 	{
 		if (low<=high) 
 		{
@@ -25,7 +25,7 @@ public class BinarySearch
 
 	public static void main(String[] args) {
 
-		BinarySearch search = new BinarySearch();
+		BinarySearch<String> search = new BinarySearch<String>();
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<String> arrayList = new ArrayList<String>();
 		
