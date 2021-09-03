@@ -13,7 +13,7 @@ public class AnagramDetection
     
         if (firstString.length() != secondString.length()) 
         {  
-            System.out.println("Entered Strings are not Anagram!");  
+            System.out.println("Entered Strings are not Anagram!!");  
         }  
         else 
         {  
@@ -27,11 +27,11 @@ public class AnagramDetection
       
             if(Arrays.equals(string1, string2) == true) 
             {  
-                System.out.println("Both the entered strings are anagram!");  
+                System.out.println("Both the entered strings are anagram!!");  
             }  
             else 
             {  
-                System.out.println("Both the entered strings are not anagram!");  
+                System.out.println("Both the entered strings are not anagram!!");  
             }  
         }  
 	}
