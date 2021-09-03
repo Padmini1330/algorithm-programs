@@ -29,6 +29,7 @@ public class StringPermutation
 
 		int size=word.length();
 		int factorial=factorial(size);
+		
 		for(int index=0;index<factorial;index++)
 		{
 			StringBuilder sb=new StringBuilder(word);
@@ -60,7 +61,7 @@ public class StringPermutation
 
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Enter the String To Permutate");
+		System.out.println("Enter the String To Permutate:");
 		String word = scanner.next();
 
 		System.out.println("Permutation by Iterating : ");
