@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class FindYourNumber 
 {
 	
-	 Scanner sc = new Scanner(System.in);
+	 Scanner scanner = new Scanner(System.in);
 	 public static void main(String[] args) 
 	    {
 	        int low = 0;
-	        Scanner sc = new Scanner(System.in);
+	        Scanner scanner = new Scanner(System.in);
 	        System.out.println("enter the number");
-	        int n = sc.nextInt();
+	        int number = scanner.nextInt();
 
-	        int high = (int) Math.pow(2, n);
+	        int high = (int) Math.pow(2, number);
 	        FindYourNumber findYourNumber = new FindYourNumber();
 	        findYourNumber.findYourNumber(low, high);
 
@@ -21,13 +21,13 @@ public class FindYourNumber
 	    public void findYourNumber(int low, int high) 
 	    {
 
-	        int mid = (high + low) / 2;
+	        int middle = (high + low) / 2;
 
 	        if (high <= low) 
 	        {
 	            System.out.println("Is the number even ?");
-	            char ch = sc.next().charAt(0);
-	            if (ch == 'Y' || ch == 'y') {
+	            char clue = scanner.next().charAt(0);
+	            if (clue == 'Y' || clue == 'y') {
 
 	                System.out.println("Guessed number is: " + high);
 
@@ -39,16 +39,16 @@ public class FindYourNumber
 	        } 
 	        else 
 	        {
-	            System.out.println("Is your number between " + low + " and " + mid + " : ");
-	            char ch = sc.next().charAt(0);
+	            System.out.println("Is your number between " + low + " and " + middle  + " : ");
+	            char clue = scanner.next().charAt(0);
 
-	            if (ch == 'y' || ch == 'Y') 
+	            if (clue == 'y' || clue == 'Y') 
 	            {
-	                findYourNumber(low, mid - 1);
+	                findYourNumber(low, middle - 1);
 	            } 
 	            else 
 	            {
-	                findYourNumber(mid + 1, high);
+	                findYourNumber(middle + 1, high);
 	            }
 	        }
 	    }   	    
