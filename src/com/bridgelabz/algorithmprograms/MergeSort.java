@@ -27,10 +27,10 @@ public class MergeSort<T extends Comparable<T>>
 		T[] leftArray = (T[])new String[sizeOfLeft];
 		T[] rightArray = (T[])new String[sizeOfRight];
 
-		for (int indexLeft = 0; indexLeft < sizeOfLeft; ++indexLeft)
+		for (int indexLeft = 0; indexLeft < sizeOfLeft; indexLeft++)
 			leftArray[indexLeft] = wordArray[left + indexLeft];
 
-		for (int indexRight = 0; indexRight < sizeOfRight; ++indexRight)
+		for (int indexRight = 0; indexRight < sizeOfRight; indexRight++)
 			rightArray[indexRight] = wordArray[middle + 1 + indexRight];
 
 		int index1 = 0, index2 = 0;
