@@ -8,9 +8,9 @@ public class PrimeNumbers
 	{
 		 Scanner scanner = new Scanner(System.in);
          int startRange, endRange;
-         System.out.println( "Enter lower bound of the interval: ");
+         System.out.println( "Enter lower bound of the interval :");
          startRange = scanner.nextInt(); 
-         System.out.println( "Enter upper bound of the interval: ");
+         System.out.println( "Enter upper bound of the interval :");
          endRange = scanner.nextInt();  
          System.out.println("Prime numbers between " + startRange+"and "+ endRange+" are:");
          findPrimeNumbers(startRange,endRange);
